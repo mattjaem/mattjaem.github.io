@@ -2,23 +2,44 @@
 <html>
 <head>
 <script>
-function clickCounter() {
+function CounterAlex() {
   if (typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    if (localStorage.clickcount1) {
+      localStorage.clickcount1 = Number(localStorage.clickcount1)+1;
     } else {
-      localStorage.clickcount = 1;
+      localStorage.clickcount1 = 1;
     }
-    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount1 + " time(s).";
   } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    document.getElementById("result").innerHTML = "I believe the expression is Oh Cock...";
   }
 }
+function CounterMatt() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount2) {
+      localStorage.clickcount2 = Number(localStorage.clickcount2)+1;
+    } else {
+      localStorage.clickcount2 = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount2 + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "I believe the expression is Oh Cock...";
+  }
+} 
+  function GetInput(){
+    
+  }
+    
 </script>
 </head>
 <body>
-
-<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<form>
+  <label for="fname">Alex Cashe</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <input type="submit" value="Submit">
+</form> 
+<p><button onclick="clickCounter()" type="button">Add Alex</button></p>
+<p><button onclick="clickCounter()" type="button">Add Alex</button></p>
 <div id="result"></div>
 <p>Click the button to see the counter increase.</p>
 <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
